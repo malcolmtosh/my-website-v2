@@ -1,2 +1,0 @@
-(self.webpackChunkmalcolmtosh_website=self.webpackChunkmalcolmtosh_website||[]).push([[839],{8839:function(e,t,a){"use strict";a.r(t);var s=a(3659);t.default=s.transliterate}}]);
-//# sourceMappingURL=839.js.map?cbac17
