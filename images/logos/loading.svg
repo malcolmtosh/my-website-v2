@@ -1,0 +1,14 @@
+<svg viewBox="0 0 50 37.4" xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+        @-webkit-keyframes rotate {to {-webkit-transform: rotate(360deg);}}
+        @keyframes rotate {to{transform: rotate(360deg);}}
+        @-webkit-keyframes dash {0% {stroke-dasharray: 1, 150;stroke-dashoffset: 0;}50% {stroke-dasharray: 90, 150;stroke-dashoffset: -35;}to{stroke-dasharray: 90, 150;stroke-dashoffset: -124;}}
+        @keyframes dash {0% {stroke-dasharray: 1, 150;stroke-dashoffset: 0;}50% {stroke-dasharray: 90, 150;stroke-dashoffset: -35;}to {stroke-dasharray: 90, 150;stroke-dashoffset: -124;}}
+        .st0{fill:#E1E1E1;}
+    </style>
+    <g style="animation: rotate 2s linear infinite; transform-origin: center;">
+        <rect x="36" y="5.6" class="st0" width="6.5" height="26.3"/>
+        <polygon class="st0" points="11.4,5.7 26.6,31.8 26.6,31.8 29.4,24 18.8,5.7 "/>
+        <path class="st0" d="M7.6,31.8h9.6l-4.5-7.7c0,0.2,0,0.4-0.1,0.7C12.4,27.9,10.4,30.6,7.6,31.8z"/>
+    </g>
+</svg>
