@@ -3,10 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 180 180" style="enable-background:new 0 0 180 180;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
+	.st0{fill:#FF3333;}
+	.st1{fill:#FFFFFF;}
 </style>
-<rect width="180" height="180"/>
-<polygon class="st0" points="138,129.7 118.3,129.7 118.3,50.3 138,50.3 "/>
-<polygon class="st0" points="43.6,50.3 89.6,129.7 89.8,129.5 98.3,105.9 66,50.3 "/>
-<path class="st0" d="M32,129.7h29.1l-13.7-23.4c0,0.7-0.2,1.4-0.2,2.1C46.5,117.9,40.4,125.9,32,129.7L32,129.7L32,129.7z"/>
+<rect class="st0" width="180" height="180"/>
+<polygon class="st1" points="138,129.7 118.3,129.7 118.3,50.3 138,50.3 "/>
+<polygon class="st1" points="43.6,50.3 89.6,129.7 89.8,129.5 98.3,105.9 66,50.3 "/>
+<path class="st1" d="M32,129.7h29.1l-13.7-23.4c0,0.7-0.2,1.4-0.2,2.1C46.5,117.9,40.4,125.9,32,129.7L32,129.7L32,129.7z"/>
 </svg>
