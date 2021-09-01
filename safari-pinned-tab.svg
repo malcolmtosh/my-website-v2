@@ -3,10 +3,14 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 180 180" style="enable-background:new 0 0 180 180;" xml:space="preserve">
 <style type="text/css">
-	.st0{display:none;fill:#FF3333;}
+	.st0{display:none;}
+	.st1{display:inline;}
 </style>
-<rect class="st0" width="180" height="180"/>
-<polygon points="138,129.7 118.3,129.7 118.3,50.3 138,50.3 "/>
-<polygon points="43.6,50.3 89.6,129.7 89.8,129.5 98.3,105.9 66,50.3 "/>
-<path d="M32,129.7h29.1l-13.7-23.4c0,0.7-0.2,1.4-0.2,2.1C46.5,117.9,40.4,125.9,32,129.7L32,129.7L32,129.7z"/>
+<path d="M0,0v180h180V0H0z M32,129.7c8.4-3.8,14.5-11.8,15.2-21.3c0-0.7,0.2-1.4,0.2-2.1l13.7,23.4H32z M89.8,129.5l-0.2,0.2
+	l-46-79.4H66l32.3,55.6L89.8,129.5z M138,129.7h-19.7V50.3H138V129.7z"/>
+<g class="st0">
+	<polygon class="st1" points="138,129.7 118.3,129.7 118.3,50.3 138,50.3 	"/>
+	<polygon class="st1" points="43.6,50.3 89.6,129.7 89.8,129.5 98.3,105.9 66,50.3 	"/>
+	<path class="st1" d="M32,129.7h29.1l-13.7-23.4c0,0.7-0.2,1.4-0.2,2.1C46.5,117.9,40.4,125.9,32,129.7L32,129.7L32,129.7z"/>
+</g>
 </svg>
