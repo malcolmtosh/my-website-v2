@@ -26,7 +26,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes" />
   <meta name="HandheldFriendly" content="true" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -44,7 +43,7 @@
   <!-- Keywords -->
   <meta name="keywords" content="Malcolm Johnson, Senior Product Designer, UX Design, UI Design, Web Design, St. Louis Designer, Digital Strategy, Branding, Prototyping, User Research" />
 
-  <link rel="canonical" href="https://www.malcolmtosh.com" />
+  <link rel="canonical" href="https://www.malcolmtosh.com" content="https://www.malcolmtosh.com" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Malcolm Johnson - Senior Product Designer & UX Strategist" />
@@ -52,7 +51,6 @@
   <meta property="og:description" content="Senior Product Designer based in St. Louis, MO, focusing on UX design, branding, and creating impactful digital experiences. Check out my portfolio." />
   <meta property="og:image" content="https://www.malcolmtosh.com/meta/malcolmtosh.com-1200x628.png" />
   <meta property="og:image:secure_url" content="https://www.malcolmtosh.com/meta/malcolmtosh.com-1200x628.png" />
-  <meta property="og:locale" content="en_US" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="628" />
@@ -91,8 +89,7 @@
 
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
-  <link rel="preload" href="images/icons/loading.svg" as="image" />
+  <link rel="preload" as="image" href="images/icons/loading.svg" />
 
   <!-- Google Tag Manager -->
   <script>
@@ -195,7 +192,7 @@
 
   <div class="navigation">
     <div class="navigation-inner">
-      <button class="close no-btn button-secondary" aria-label="Close navigation menu">
+      <button class="close no-btn button-secondary">
         Close<span class="button-secondary--icon icon icon-burger" />
       </button>
       <ul>
@@ -208,7 +205,7 @@
         <a href="https://www.linkedin.com/in/malcolmdjohnson/" rel="nofollow">LinkedIn</a>
         <a href="https://github.com/malcolmtosh/" rel="nofollow">GitHub</a>
         <a href="https://www.instagram.com/malcolmtosh/" rel="nofollow">Instagram</a>
-        <a href="https://x.com/malcolmtosh/" rel="nofollow">X</a>
+        <a href="https://twitter.com/malcolmtosh/" rel="nofollow">X</a>
         <!-- <a href="https://www.facebook.com/malcolmtosh/" rel="nofollow">Facebook</a> -->
         <span><span class="symbol-copy">&copy;</span> 2024 Malcolm Johnson</span>
       </p>
@@ -222,7 +219,8 @@
           <div class="rslide-inner" style="z-index: 5; background-color: #f33">
             <div class="rslide-background" href="about/">
               <span class="sr-only">I use design to solve problems and bring ideas to life.</span>
-              <img src="images/slides/welcome/welcome-2880x2160.png" alt="St. Louis skyline" loading="lazy" />
+              <img src="" data-src="images/slides/welcome/welcome-2880x2160.png" alt="St. Louis skyline" />
+            </div>
             <div class="rslide-text">
               <h1 class="h1">
                 I use design to solve problems and bring ideas to life.
