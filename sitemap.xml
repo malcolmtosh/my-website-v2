@@ -1,72 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://www.malcolmtosh.com/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/work/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/about/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/contact/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/konquered-balance/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/vespa-red/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/work/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/about/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/contact/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.malcolmtosh.com/downloads/mj_2022.pdf</loc>
-  <lastmod>2022-09-06T04:43:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
-</urlset>
-=======
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.malcolmtosh.com/</loc>
@@ -104,4 +36,3 @@
     <priority>0.70</priority>
   </url>
 </urlset>
->>>>>>> ade8769 (Bug fixes and efficiency improvements)

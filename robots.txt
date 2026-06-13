@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-User-agent: * 
-Disallow:
-=======
 User-agent: *
 Disallow:
 
 Sitemap: https://www.malcolmtosh.com/sitemap.xml
->>>>>>> ade8769 (Bug fixes and efficiency improvements)
