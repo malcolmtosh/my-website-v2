@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="fonts-loading">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -34,8 +34,13 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="628" />
 
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Malcolm Johnson - Senior Product Designer & UX Strategist" />
+<meta name="twitter:description" content="Get in touch with Malcolm Johnson, Senior Product Designer in St. Louis, MO, for design projects and collaborations." />
+<meta name="twitter:image" content="https://www.malcolmtosh.com/meta/malcolmtosh.com-1200x628.png" />
+
   <meta itemprop="name" content="Senior Product Designer">
-  <meta itemprop="image" content="https://malcolmtosh.com/img/icons/favicon-194x194.png">
+  <meta itemprop="image" content="https://www.malcolmtosh.com/favicon-194x194.png">
   <meta itemprop="description" content="Malcolm Johnson is a Senior Product Designer based in St. Louis, MO.">
 
 
@@ -78,7 +83,7 @@
 <!-- Schema.org Structured Data -->
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Person",
     "name": "Malcolm Johnson",
     "jobTitle": "Senior Product Designer",
@@ -177,6 +182,46 @@
 
   <main class="page-view" id="main-content">
     <div class="page-view-inner">
+      <header class="top-of-page" data-theme="">
+        <div class="background">
+          <div class="container column">
+            <div class="nav-item">
+              <a href="../" title="Malcolmtosh">
+                <svg height="21" width="28" fill="#000">
+                  <path class="st0" d="M0,19.7h7.2l-3.4-5.8c0,0.2,0,0.3,0,0.5C3.6,16.7,2.1,18.7,0,19.7L0,19.7z" />
+                  <polygon class="st0" points="2.9,0 14.3,19.6 14.3,19.6 16.4,13.8 8.4,0 2.9,0 	" />
+                  <polygon class="st0" points="26.3,19.7 21.4,19.7 21.4,0 26.3,0 26.3,19.7 	" />
+                </svg>
+              </a>
+            </div>
+            <div class="nav-stack">
+              <div class="nav-item">
+                <a href="../work/" class="at-left button-secondary ">
+                  <span>Work</span>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="../about/" class="at-left button-secondary">
+                  <span>About</span>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="index.html" class="at-left button-secondary is-active">
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+            <div class="nav-stack open-navigation">
+              <div class="nav-item">
+                <button class="at-left no-btn button-secondary"><span>Menu</span>
+                  <span class="button-secondary--icon icon icon-burger"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
       <div id="contact">
         <div class="container form-layer-container steps-state">
           <form name='contact-form' class='column form-column' method='post' data-netlify='true'
@@ -187,15 +232,15 @@
               too.
             </p>
             <div class="form-group">
-              <label class="input">
+              <label class="input" for="form_first-name">
                 <input id="form_first-name" name="firstName" placeholder="First name" required type="text">
                 <span>First name</span>
               </label>
-              <label class="input">
+              <label class="input" for="form_last-name">
                 <input id="form_last-name" name="lastName" placeholder="Last name" required type="text">
                 <span>Last name</span>
               </label>
-              <label class="input">
+              <label class="input" for="form_email">
                 <input id="form_email" name="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
                   placeholder="name@company.com" required type="email">
                 <span>Email</span>
@@ -203,15 +248,15 @@
               </label>
             </div>
             <div class="message">
-              <label class="input">
-                <input id="form_message" name="formMessage" placeholder="Message" type="text">
+              <label class="input" for="form_message">
+                <textarea id="form_message" class="input-message" name="formMessage" placeholder="Message" rows="4"></textarea>
                 <span>Message</span>
               </label>
             </div>
             <button type="submit" class="submit_form button">
               <span class="default-state">Send</span>
-              <span class="process-state">Sending...<span class="icon icon-spinner"></span></span>
-              <span class="complete-state">Sent<span class="icon icon-check"></span></span>
+              <span class="process-state" aria-hidden="true">Sending...<span class="icon icon-spinner"></span></span>
+              <span class="complete-state" aria-hidden="true">Sent<span class="icon icon-check"></span></span>
             </button>
             <p class="form-footer">
               Or email me at <a href="mailto:malcolmtosh@gmail.com?subject=Love%20Your%20Website!%20Let's%20Chat!"
@@ -234,7 +279,7 @@
               <h2>Your request wasn't sent 😕</h2>
               <p>For some reason your request didn't proceed. Please make sure your connection is fine and try again. If
                 that doesn't work let's get in touch via email</p>
-              <a class="submit_form">Send again</a>
+              <button type="button" class="submit_form fail-retry">Send again</button>
               <a class="mailto" href="mailto:malcolmtosh@gmail.com">Send email</a>
             </div>
           </div>
@@ -290,46 +335,6 @@
           </div>
         </div>
       </footer>
-
-      <header class="top-of-page" data-theme="">
-        <div class="background">
-          <div class="container column">
-            <div class="nav-item">
-              <a href="../" title="Malcolmtosh">
-                <svg height="21" width="28" fill="#000">
-                  <path class="st0" d="M0,19.7h7.2l-3.4-5.8c0,0.2,0,0.3,0,0.5C3.6,16.7,2.1,18.7,0,19.7L0,19.7z" />
-                  <polygon class="st0" points="2.9,0 14.3,19.6 14.3,19.6 16.4,13.8 8.4,0 2.9,0 	" />
-                  <polygon class="st0" points="26.3,19.7 21.4,19.7 21.4,0 26.3,0 26.3,19.7 	" />
-                </svg>
-              </a>
-            </div>
-            <div class="nav-stack">
-              <div class="nav-item">
-                <a href="../work/" class="at-left button-secondary ">
-                  <span>Work</span>
-                </a>
-              </div>
-              <div class="nav-item">
-                <a href="../about/" class="at-left button-secondary">
-                  <span>About</span>
-                </a>
-              </div>
-              <div class="nav-item">
-                <a href="index.html" class="at-left button-secondary is-active">
-                  <span>Contact</span>
-                </a>
-              </div>
-            </div>
-            <div class="nav-stack open-navigation">
-              <div class="nav-item">
-                <button class="at-left no-btn button-secondary"><span>Menu</span>
-                  <span class="button-secondary--icon icon icon-burger"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
     </div>
   </main>
 </body>

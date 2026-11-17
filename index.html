@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fonts-loading">
+<html lang="en">
 <!--
 
   [[[[[[[[[[[[[[[               ]]]]]]]]]]]]]]]
@@ -55,8 +55,13 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="628" />
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Malcolm Johnson - Senior Product Designer & UX Strategist" />
+  <meta name="twitter:description" content="Senior Product Designer based in St. Louis, MO, focusing on UX design, branding, and creating impactful digital experiences. Check out my portfolio." />
+  <meta name="twitter:image" content="https://www.malcolmtosh.com/meta/malcolmtosh.com-1200x628.png" />
+
   <meta itemprop="name" content="Senior Product Designer" />
-  <meta itemprop="image" content="https://malcolmtosh.com/favicon-194x194.png" />
+  <meta itemprop="image" content="https://www.malcolmtosh.com/favicon-194x194.png" />
   <meta itemprop="description" content="Malcolm Johnson is a Senior Product Designer based in St. Louis, MO." />
 
 
@@ -74,7 +79,6 @@
   <meta name="apple-mobile-web-app-title" content="Malcolm" />
   <meta name="application-name" content="Malcolm" />
   <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="theme-color" content="#ffffff" />
 
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -104,7 +108,7 @@
 
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Person",
       "name": "Malcolm Johnson",
       "jobTitle": "Senior Product Designer",
@@ -205,13 +209,54 @@
 
   <main class="page-view" id="main-content">
     <div class="page-view-inner">
+      <header class="top-of-page" data-theme="">
+        <div class="background">
+          <div class="container column">
+            <div class="nav-item">
+              <a href="#top" title="Malcolmtosh">
+                <svg height="21" width="28" fill="currentColor">
+                  <path d="M0,19.7h7.2l-3.4-5.8c0,0.2,0,0.3,0,0.5C3.6,16.7,2.1,18.7,0,19.7L0,19.7z" />
+                  <polygon points="2.9,0 14.3,19.6 14.3,19.6 16.4,13.8 8.4,0 2.9,0 	" />
+                  <polygon points="26.3,19.7 21.4,19.7 21.4,0 26.3,0 26.3,19.7 	" />
+                </svg>
+              </a>
+            </div>
+            <div class="nav-stack">
+              <div class="nav-item">
+                <a href="work/" class="at-left button-secondary">
+                  <span>Work</span>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="about/" class="at-left button-secondary">
+                  <span>About</span>
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="contact/" class="at-left button-secondary">
+                  <span>Contact</span>
+                </a>
+              </div>
+            </div>
+            <div class="nav-stack open-navigation">
+              <div class="nav-item">
+                <button class="at-left no-btn button-secondary">
+                  <span>Menu</span>
+                  <span class="button-secondary--icon icon icon-burger"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
       <div class="rslider-component">
         <div class="rslide" data-theme="dark" id="top">
-          <div class="rslide-inner" style="z-index: 5; background-color: #f33">
-            <div class="rslide-background" href="about/">
+          <div class="rslide-inner" style="z-index: 5; background-color: #d62828">
+            <a class="rslide-background" href="about/">
               <span class="sr-only">I use design to solve problems and bring ideas to life.</span>
-              <img src="" data-src="images/slides/welcome/welcome-2880x2160.png" alt="St. Louis skyline" />
-            </div>
+              <img src="images/slides/welcome/welcome-2880x2160.png" data-src="images/slides/welcome/welcome-2880x2160.png" width="2880" height="2160" alt="St. Louis skyline" loading="eager" fetchpriority="high" />
+            </a>
             <div class="rslide-text">
               <h1 class="h1">
                 I use design to solve problems and bring ideas to life.
@@ -229,15 +274,15 @@
           <div class="rslide-inner" style="z-index: 4; background-color: #1d1d1f">
             <a class="rslide-background" href="konquered-balance/">
               <span class="sr-only">Fitness coach brand identity</span>
-              <img src="" data-src="images/slides/konquered-balance/slide-konquered-balance-2880x2160.webp"
-                alt="Konquered Balance Identity" />
+              <img src="images/slides/konquered-balance/slide-konquered-balance-2880x2160.webp" data-src="images/slides/konquered-balance/slide-konquered-balance-2880x2160.webp" width="2880" height="2160"
+                alt="Konquered Balance Identity" loading="lazy" decoding="async" />
             </a>
             <div class="rslide-text">
               <img src="images/slides/konquered-balance/konquered-balance-horizontal-logo.svg"
                 alt="Konquered Balance" />
               <h2 class="h1">
-                <span id="content1">Fitness coach</span>
-                <span id="content2">brand identity</span>
+                <span class="content-line1">Fitness coach</span>
+                <span class="content-line2">brand identity</span>
               </h2>
               <p class="rtlink">
                 <a class="btn-solid" href="konquered-balance/">
@@ -252,14 +297,14 @@
           <div class="rslide-inner" style="z-index: 3; background-color: #fafafa">
             <a class="rslide-background" href="https://www.handlpartners.com/media/" rel="nofollow noopener">
               <span class="sr-only">Agency landing page design</span>
-              <img src="" data-src="images/slides/h-and-l/slide-handl-media-landing-page-2880x2160.webp"
-                alt="H&amp;L Landing Page" />
+              <img src="images/slides/h-and-l/slide-handl-media-landing-page-2880x2160.webp" data-src="images/slides/h-and-l/slide-handl-media-landing-page-2880x2160.webp" width="2880" height="2160"
+                alt="H&amp;L Landing Page" loading="lazy" decoding="async" />
             </a>
             <div class="rslide-text">
               <img src="images/slides/h-and-l/hl-partners-blue.svg" alt="H&amp;L Partners" />
               <h2 class="h1">
-                <span id="content1">Agency landing</span>
-                <span id="content2">page design</span>
+                <span class="content-line1">Agency landing</span>
+                <span class="content-line2">page design</span>
               </h2>
               <p class="rtlink">
                 <a class="btn-solid" href="https://www.handlpartners.com/media/" rel="nofollow noopener">
@@ -274,13 +319,13 @@
           <div class="rslide-inner" style="z-index: 2; background-color: #c0242b">
             <a class="rslide-background" href="vespa-red/">
               <span class="sr-only">Redesign concept</span>
-              <img src="" data-src="images/slides/vespa/slide-vespa-2880x2160.webp" alt="Vespa 946 (RED) scooter against a red background" />
+              <img src="images/slides/vespa/slide-vespa-2880x2160.webp" data-src="images/slides/vespa/slide-vespa-2880x2160.webp" width="2880" height="2160" alt="Vespa 946 (RED) scooter against a red background" loading="lazy" decoding="async" />
             </a>
             <div class="rslide-text">
               <img src="images/slides/vespa/vespa_red_logo.svg" alt="Vespa(RED)" />
               <h2 class="h1">
-                <span id="content1">Redesign</span>
-                <span id="content2">concept</span>
+                <span class="content-line1">Redesign</span>
+                <span class="content-line2">concept</span>
               </h2>
               <p class="rtlink">
                 <a class="btn-solid" href="vespa-red/">
@@ -295,8 +340,8 @@
           <div class="rslide-inner" style="z-index: 1; background-color: #1d1d1f">
             <a class="rslide-background" href="contact/">
               <span class="sr-only">Senior Product Designer</span>
-              <img class="profile-image" src="" data-src="images/slides/footer/slide-protrait-2880-2160.webp"
-                alt="Malcolm" />
+              <img class="profile-image" src="images/slides/footer/slide-protrait-2880-2160.webp" data-src="images/slides/footer/slide-protrait-2880-2160.webp" width="2880" height="2160"
+                alt="Malcolm" loading="lazy" decoding="async" />
             </a>
 
             <div class="rslide-text">
@@ -388,47 +433,6 @@
         <li title="Vespa"></li>
         <li title="Outro"></li>
       </ul>
-
-      <header class="top-of-page" data-theme="">
-        <div class="background">
-          <div class="container column">
-            <div class="nav-item">
-              <a href="#top" title="Malcolmtosh">
-                <svg height="21" width="28" fill="currentColor">
-                  <path d="M0,19.7h7.2l-3.4-5.8c0,0.2,0,0.3,0,0.5C3.6,16.7,2.1,18.7,0,19.7L0,19.7z" />
-                  <polygon points="2.9,0 14.3,19.6 14.3,19.6 16.4,13.8 8.4,0 2.9,0 	" />
-                  <polygon points="26.3,19.7 21.4,19.7 21.4,0 26.3,0 26.3,19.7 	" />
-                </svg>
-              </a>
-            </div>
-            <div class="nav-stack">
-              <div class="nav-item">
-                <a href="work/" class="at-left button-secondary">
-                  <span>Work</span>
-                </a>
-              </div>
-              <div class="nav-item">
-                <a href="about/" class="at-left button-secondary">
-                  <span>About</span>
-                </a>
-              </div>
-              <div class="nav-item">
-                <a href="contact/" class="at-left button-secondary">
-                  <span>Contact</span>
-                </a>
-              </div>
-            </div>
-            <div class="nav-stack open-navigation">
-              <div class="nav-item">
-                <button class="at-left no-btn button-secondary">
-                  <span>Menu</span>
-                  <span class="button-secondary--icon icon icon-burger"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
     </div>
   </main>
 </body>

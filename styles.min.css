@@ -16,3 +16,68 @@ article section .picture img,article section .picture-inner img{height:auto}
 .skip-link:focus{left:0}
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* === Accessibility, Focus & Contrast Enhancements === */
+:focus-visible {
+  outline: 2px solid #141414 !important;
+  outline-offset: 3px !important;
+}
+[data-theme="dark"] :focus-visible,
+.rslide[data-theme="dark"] :focus-visible,
+.hero[data-theme="dark"] :focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 3px !important;
+}
+.card-video:focus-visible {
+  opacity: 1 !important;
+  background-color: transparent !important;
+  outline: 3px solid #141414 !important;
+  outline-offset: -3px !important;
+}
+.rslider-pagination li:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+button.collapse-control {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+.card p {
+  color: rgba(20, 20, 20, 0.72) !important;
+}
+[data-theme="dark"] .card p {
+  color: hsla(0, 0%, 100%, 0.75) !important;
+}
+.social-network-link a {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form textarea.input-message {
+  width: 100%;
+  border-radius: 4px;
+  font: inherit;
+  padding: 14px 10px;
+  resize: vertical;
+  min-height: 120px;
+}
+button.submit_form.fail-retry {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}

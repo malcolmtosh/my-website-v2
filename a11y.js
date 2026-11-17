@@ -1,6 +1,5 @@
-/* Accessibility progressive enhancements (2026-06).
-   Runs after main.min.js; every block is guarded so a missing element
-   or future markup change can never throw. */
+/* Accessibility progressive enhancements.
+   Runs after main.min.js; idempotent and resilient to PJAX route transitions. */
 (function () {
   "use strict";
 
@@ -9,34 +8,21 @@
     else document.addEventListener("DOMContentLoaded", fn);
   }
 
-  function asButton(el) {
-    el.setAttribute("role", "button");
-    el.setAttribute("tabindex", "0");
-    el.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
-        e.preventDefault();
-        el.click();
-      }
-    });
-  }
-
-  ready(function () {
-    /* 1. Homepage slider pagination dots are <li> elements with click
-       handlers bound by main.min.js. Make them reachable and operable
-       by keyboard, with an accessible name from their title attribute. */
+  function enhanceSliderDots() {
     try {
       var dots = document.querySelectorAll(".rslider-pagination li");
       Array.prototype.forEach.call(dots, function (dot, i) {
-        asButton(dot);
-        var label = dot.getAttribute("title") || "Slide " + (i + 1);
-        dot.setAttribute("aria-label", "Go to slide: " + label);
+        if (!dot.getAttribute("role")) {
+          dot.setAttribute("role", "button");
+          dot.setAttribute("tabindex", "0");
+          var label = dot.getAttribute("title") || "Slide " + (i + 1);
+          dot.setAttribute("aria-label", "Go to slide: " + label);
+        }
       });
     } catch (e) { /* no-op */ }
+  }
 
-    /* 2. Off-canvas menu: keep aria-expanded in sync on the Menu/Close
-       buttons. main.min.js toggles classes ("navigation-opened" /
-       "is-opened"), so observe class changes rather than re-implement
-       the toggle logic. */
+  function enhanceOffCanvasMenu() {
     try {
       var menuBtns = document.querySelectorAll(
         ".open-navigation button, .navigation .close"
@@ -44,6 +30,7 @@
       var nav = document.querySelector(".navigation");
       if (nav && menuBtns.length) {
         if (!nav.id) nav.id = "site-navigation";
+        nav.setAttribute("aria-label", "Main Navigation");
         var syncMenu = function () {
           var open =
             document.documentElement.classList.contains("navigation-opened") ||
@@ -55,30 +42,43 @@
           });
         };
         syncMenu();
-        var menuObserver = new MutationObserver(syncMenu);
-        [document.documentElement, document.body, nav].forEach(function (el) {
-          menuObserver.observe(el, { attributes: true, attributeFilter: ["class"] });
-        });
+        if (!nav._observed) {
+          nav._observed = true;
+          var menuObserver = new MutationObserver(syncMenu);
+          [document.documentElement, document.body, nav].forEach(function (el) {
+            menuObserver.observe(el, { attributes: true, attributeFilter: ["class"] });
+          });
+        }
       }
     } catch (e) { /* no-op */ }
+  }
 
-    /* 3. About-page FAQ accordion: the toggles are anchors without href,
-       which keyboard users cannot reach. Make them act as buttons and
-       keep aria-expanded in sync with the "opened" class main.min.js
-       toggles on the parent <li>. */
+  function enhanceAccordions() {
     try {
       var controls = document.querySelectorAll(
         ".section-collapse .collapse-control"
       );
-      Array.prototype.forEach.call(controls, function (ctrl) {
-        asButton(ctrl);
+      Array.prototype.forEach.call(controls, function (ctrl, idx) {
         var li = ctrl.closest("li");
-        if (li) {
+        var content = li ? li.querySelector(".content-collapse") : null;
+        var panelId = content ? (content.id || "faq-panel-" + (idx + 1)) : "";
+        if (content && !content.id) {
+          content.id = panelId;
+          content.setAttribute("role", "region");
+        }
+        if (content) {
+          ctrl.setAttribute("aria-controls", panelId);
+          if (content.id) content.setAttribute("aria-labelledby", ctrl.id || (ctrl.id = "faq-ctrl-" + (idx + 1)));
+        }
+        if (ctrl.tagName !== "BUTTON") {
+          ctrl.setAttribute("role", "button");
+          ctrl.setAttribute("tabindex", "0");
+        }
+        if (li && !li._observed) {
+          li._observed = true;
           var syncPanel = function () {
-            ctrl.setAttribute(
-              "aria-expanded",
-              li.classList.contains("opened") ? "true" : "false"
-            );
+            var isOpen = li.classList.contains("opened");
+            ctrl.setAttribute("aria-expanded", isOpen ? "true" : "false");
           };
           syncPanel();
           new MutationObserver(syncPanel).observe(li, {
@@ -88,5 +88,55 @@
         }
       });
     } catch (e) { /* no-op */ }
+  }
+
+  function initAll() {
+    enhanceSliderDots();
+    enhanceOffCanvasMenu();
+    enhanceAccordions();
+  }
+
+  ready(function () {
+    initAll();
+
+    // Re-run enhancements when PJAX transitions inject new page-view content
+    try {
+      var observer = new MutationObserver(function (mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+          if (mutations[i].addedNodes.length) {
+            initAll();
+            break;
+          }
+        }
+      });
+      var mainEl = document.querySelector("main") || document.body;
+      observer.observe(mainEl, { childList: true, subtree: true });
+    } catch (e) { /* no-op */ }
+
+    // Global keyboard delegation for custom button-like elements (dots, controls)
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        var target = e.target.closest(".rslider-pagination li, a.collapse-control");
+        if (target && target.tagName !== "BUTTON" && target.tagName !== "INPUT") {
+          e.preventDefault();
+          target.click();
+        }
+      } else if (e.key === "Escape" || e.key === "Esc") {
+        var nav = document.querySelector(".navigation");
+        var isOpened = nav && (
+          nav.classList.contains("is-opened") ||
+          document.body.classList.contains("navigation-opened") ||
+          document.documentElement.classList.contains("navigation-opened")
+        );
+        if (isOpened) {
+          var closeBtn = document.querySelector(".navigation .close");
+          if (closeBtn) {
+            closeBtn.click();
+            var openBtn = document.querySelector(".open-navigation button");
+            if (openBtn) openBtn.focus();
+          }
+        }
+      }
+    });
   });
 })();
